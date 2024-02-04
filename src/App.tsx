@@ -130,6 +130,15 @@ function App() {
 							<span className="sr-only">Icon description</span>
 						</button>
 					</form>
+					<div className="mt-10">
+						<h1 className="text-xl">Randomize</h1>
+						<button
+							onClick={handleRandom}
+							className="bg-blue-500 hover:bg-blue-400 text-white font-bold mx-2 py-2 px-3 border-b-4 border-blue-700 hover:border-blue-500 rounded-xl hover:scale-105 ease-in duration-100"
+						>
+							Ready? Let's go!
+						</button>
+					</div>
 				</div>
 				<div className="p-8 px-12">
 					<h2 className="text-xl">Meal Pool</h2>
@@ -143,15 +152,6 @@ function App() {
 						className="bg-blue-500 hover:bg-blue-400 text-white font-bold mx-2 py-2 px-3 border-b-4 border-blue-700 hover:border-blue-500 rounded-xl hover:scale-105 ease-in duration-100"
 					>
 						Reset
-					</button>
-				</div>
-				<div className="p-8 px-12">
-					<h1 className="text-xl">Randomize</h1>
-					<button
-						onClick={handleRandom}
-						className="bg-blue-500 hover:bg-blue-400 text-white font-bold mx-2 py-2 px-3 border-b-4 border-blue-700 hover:border-blue-500 rounded-xl hover:scale-105 ease-in duration-100"
-					>
-						Randomize
 					</button>
 				</div>
 			</div>
