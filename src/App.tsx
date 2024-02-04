@@ -23,6 +23,7 @@ function App() {
 
 	const handleReset = () => {
 		setMeals([]);
+		setLunch('');
 	};
 
 	const handleAddMeal = (e: React.FormEvent) => {
