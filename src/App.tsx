@@ -55,7 +55,7 @@ function App() {
 
 	return (
 		<div className="mt-20">
-			<h1 className="text-3xl">What's for lunch?</h1>
+			<h1 className="text-3xl mb-10">What's for lunch?</h1>
 			{isExploding && (
 				<ConfettiExplosion
 					force={0.8}
@@ -64,6 +64,7 @@ function App() {
 					width={1600}
 				/>
 			)}
+			{lunch && <h2 className="text-5xl mb-10">{lunch}</h2>}
 			<h2 className="text-xl mt-5 mb-1">
 				Pick the food category (can choose more than 1)
 			</h2>
@@ -152,7 +153,6 @@ function App() {
 					</button>
 				</div>
 			</div>
-			{lunch && <h2 className="text-xl">Today's lunch will be {lunch}</h2>}
 		</div>
 	);
 }
