@@ -49,8 +49,10 @@ function App() {
 	};
 
 	const handleRandom = () => {
-		setLunch(meals[Math.floor(Math.random() * meals.length)]);
-		setIsExploding(true);
+		if (meals.length > 0) {
+			setLunch(meals[Math.floor(Math.random() * meals.length)]);
+			setIsExploding(true);
+		}
 	};
 
 	return (
