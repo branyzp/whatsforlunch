@@ -24,6 +24,7 @@ function App() {
 	const handleReset = () => {
 		setMeals([]);
 		setLunch('');
+		setIsExploding(false);
 	};
 
 	const handleAddMeal = (e: React.FormEvent) => {
