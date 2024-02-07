@@ -35,19 +35,27 @@ function App() {
 	};
 
 	const handleClickFastFood = () => {
-		setMeals([...meals, ...categories.fastFood]);
+		if (!meals.includes(categories.fastFood[0])) {
+			setMeals([...meals, ...categories.fastFood]);
+		}
 	};
 
 	const handleClickHawker = () => {
-		setMeals([...meals, ...categories.hawker]);
+		if (!meals.includes(categories.hawker[0])) {
+			setMeals([...meals, ...categories.hawker]);
+		}
 	};
 
 	const handleClickJap = () => {
-		setMeals([...meals, ...categories.japanese]);
+		if (!meals.includes(categories.japanese[0])) {
+			setMeals([...meals, ...categories.japanese]);
+		}
 	};
 
 	const handleClickWestern = () => {
-		setMeals([...meals, ...categories.western]);
+		if (!meals.includes(categories.western[0])) {
+			setMeals([...meals, ...categories.western]);
+		}
 	};
 
 	const handleRandom = () => {
