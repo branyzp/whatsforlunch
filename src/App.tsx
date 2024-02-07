@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import ConfettiExplosion from 'react-confetti-explosion';
+import Confetti from 'react-confetti';
+import useWindowSize from 'react-use/lib/useWindowSize';
 
 function App() {
 	const [meal, setMeal] = useState<string>('');
 	const [meals, setMeals] = useState<(typeof meal)[]>([]);
 	const [lunch, setLunch] = useState<string>('');
 	const [isExploding, setIsExploding] = useState<boolean>(false);
+
+	const { width, height } = useWindowSize();
 
 	const categories = {
 		fastFood: ['KFC', 'Mcdonalds', 'Subway', 'Long John Silvers', 'Popeyes'],
@@ -68,14 +71,8 @@ function App() {
 	return (
 		<div className="mt-20">
 			<h1 className="text-3xl mb-10">What's for lunch?</h1>
-			{isExploding && (
-				<ConfettiExplosion
-					force={0.8}
-					duration={3000}
-					particleCount={250}
-					width={1600}
-				/>
-			)}
+			{isExploding && <Confetti width={width} height={height} />}
+
 			{lunch && <h2 className="text-5xl mb-10">{lunch}</h2>}
 			<h2 className="text-xl mt-5 mb-1">
 				Pick the food category (can choose more than 1)
